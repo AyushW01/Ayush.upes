@@ -1,0 +1,50 @@
+ Q63
+Merge Two Arrays
+#include <stdio.h>
+int main()
+{
+    int a[3], b[3], c[6];
+    int i;
+    printf("Enter first array: ");
+    for(i = 0; i < 3; i++)
+        scanf("%d", &a[i]);
+    printf("Enter second array: ");
+    for(i = 0; i < 3; i++)
+        scanf("%d", &b[i]);
+    for(i = 0; i < 3; i++)
+        c[i] = a[i];
+    for(i = 0; i < 3; i++)
+        c[i + 3] = b[i];
+    printf("Merged Array: ");
+    for(i = 0; i < 6; i++)
+        printf("%d ", c[i]);
+    return 0;
+}
+
+ Q64
+Most Frequent Digit in an Integer
+#include <stdio.h>
+int main()
+{
+    long long n;
+    int count[10] = {0};
+    int rem, i, max = 0, digit = 0;
+    printf("Enter number: ");
+    scanf("%lld", &n);
+    while(n != 0)
+    {
+        rem = n % 10;
+        count[rem]++;
+        n = n / 10;
+    }
+    for(i = 0; i < 10; i++)
+    {
+        if(count[i] > max)
+        {
+            max = count[i];
+            digit = i;
+        }
+    }
+    printf("Most frequent digit = %d", digit);
+    return 0;
+}
