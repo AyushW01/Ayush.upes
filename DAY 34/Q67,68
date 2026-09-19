@@ -1,0 +1,54 @@
+Q67
+Insert an Element at a Given Position
+#include <stdio.h>
+int main()
+{
+    int a[6], n = 5, value, pos, i;
+    printf("Enter 5 elements: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    printf("Enter position: ");
+    scanf("%d", &pos);
+    printf("Enter value: ");
+    scanf("%d", &value);
+    for(i = n; i >= pos; i--)
+        a[i] = a[i - 1];
+    a[pos - 1] = value;
+    n++;
+    for(i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    return 0;
+}
+
+
+Q68
+Delete an Element from an Array
+#include <stdio.h>
+int main()
+{
+    int a[5], n = 5, value, i, pos = -1;
+    printf("Enter 5 elements: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    printf("Enter element to delete: ");
+    scanf("%d", &value);
+    for(i = 0; i < n; i++)
+    {
+        if(a[i] == value)
+        {
+            pos = i;
+            break;
+        }
+    }
+    if(pos == -1)
+        printf("Element not found");
+    else
+    {
+    }
+        for(i = pos; i < n - 1; i++)
+            a[i] = a[i + 1];
+        n--;
+        for(i = 0; i < n; i++)
+            printf("%d ", a[i]);
+    return 0;
+}
