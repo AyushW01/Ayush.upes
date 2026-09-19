@@ -1,0 +1,52 @@
+LCM OF 2 NUMBERS 
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, max;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    max = (a>b) ? a : b;
+
+    while(1)
+    {
+        if(max%a==0 && max%b==0)
+        {
+            printf("LCM = %d", max);
+            break;
+        }
+
+        max++;
+    }
+
+    return 0;
+}
+
+
+
+SUM OF DIGITS
+
+
+#include <stdio.h>
+
+int main()
+{
+    int n, rem, sum=0;
+
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    while(n != 0)
+    {
+        rem = n%10;
+        sum = sum+rem;
+        n = n/10;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
