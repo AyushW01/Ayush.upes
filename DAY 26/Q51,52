@@ -1,0 +1,35 @@
+Q51Right-Aligned Number Pattern
+
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for(i = 5; i >= 1; i--)
+    {
+        for(j = 1; j < i; j++)
+            printf(" ");
+        for(j = i; j <= 5; j++)
+            printf("%d", j);
+        printf("\n");
+    }
+    return 0;
+}
+
+Q52-  Vertical Star Groups PatterN
+
+
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for(j = 1; j <= 3; j++)
+    {
+        for(i = 1; i <= 5; i++)
+            printf("*\n");
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
