@@ -1,0 +1,44 @@
+ Q61
+Linear Search in an Array
+#include <stdio.h>
+int main()
+{
+    int a[5], i, key, found = 0;
+    printf("Enter 5 elements: ");
+    for(i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+    for(i = 0; i < 5; i++)
+    {
+        if(a[i] == key)
+        {
+            printf("Found at position %d", i + 1);
+            found = 1;
+            break;
+        }
+    }
+    if(found == 0)
+        printf("Not Found");
+    return 0;
+}
+
+
+Q62
+Reverse an Array Without Extra Space
+#include <stdio.h>
+int main()
+{
+    int a[5], i, temp;
+    for(i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+    for(i = 0; i < 2; i++)
+    {
+        temp = a[i];
+        a[i] = a[4 - i];
+        a[4 - i] = temp;
+    }
+    for(i = 0; i < 5; i++)
+        printf("%d ", a[i]);
+    return 0;
+}
